@@ -1,0 +1,139 @@
+extend layout
+
+block content
+	.gy_box
+		include lib/header
+		#gy_step
+			.gy_step_main.px1000.clearfix
+				.gy_step_main_p.fl
+					p.gy_step_proe1 1
+					p(style='color:#29A7E1;padding-top:10px;') 填写用户信息
+				.list_press_wper.fl
+					.list_press
+				.gy_step_main_p.fl
+					p.gy_step_proe2 2
+					p(style='padding-top:10px;') 手机信息验证
+				.list_press_wper.fl
+					.list_press
+				.gy_step_main_p.fl
+					p.gy_step_proe3 3
+					p(style='padding-top:10px;') 注册成功
+		#form_main.px1000.clearfix
+			.form_main_grjg_xx
+				span#form_main_gr 个人注册
+				span#form_main_jg 机构注册
+			div
+				#login1.left_form.fl
+					form
+						.form_lb
+							lable 手机/邮箱:
+							input.form-control(type='text', value='请输入手机/邮箱', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '请输入手机/邮箱';}")
+						.form_lb.clearfix
+							lable 密码:
+							input.form-control(type='text', value='请输入密码', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '请输入密码';}")
+							.saf_lv_main.fl
+								.saf_lv(style='background:#29A7E1;')
+								.saf_lv(style='background:#29A7E1;')
+								.saf_lv
+								.saf_lv
+								.saf_lv
+						.form_lb
+							lable 确认密码:
+							input.form-control(type='text', value='请再次输入密码', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '请再次输入密码';}")
+						.form_lb
+							lable 图片验证码:
+							input.chcode(type='text', value='请输入右边的验证码', onfocus="this.value ='';", onblur="if (this.value == '') {this.value = '请输入右边的验证码';}")
+							span
+								img(src='/public/images/home/checkcode.png')
+						.form_lb
+							lable 邀请码:
+							input.form-control(type='text', value='选填', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '选填';}")
+						.form_lb.cheb_yes
+							input(type='checkbox', name='', value='')
+							span
+								| 我已阅读并同意ppp在线的
+								a(href='')
+									span(style='color:#29A7E1;') 《服务条款》
+							p
+								a(href='')
+									img(src='/public/images/home/login_btn.png')
+				#login2.left_form.fl(style='display:none;')
+					form
+						.form_lb
+							lable 机构用户名:
+							input.form-control(type='text', value='请输入机构用户名', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '请输入机构用户名';}")
+						.form_lb
+							lable 机构类型:
+							select#select_k1.xla_k(name='select')
+								option(value='国营企业') 国营企业
+								option(value='民营企业') 民营企业
+								option(value='政府单位') 政府单位
+								option(value='社会团体') 社会团体
+								option(value='慈善机构') 慈善机构
+						.form_lb
+							lable 办公所在地:
+							select#form_lb_diqu.form_lb_diqu(name='select')
+								option(value='国营企业') 北京
+							span(style='margin:auto 5px;color:#808080;') 省
+							select#form_lb_diqu.form_lb_diqu(name='select')
+								option(value='国营企业') 北京
+							span(style='margin:auto 5px;color:#808080;') 市
+						.form_lb_name
+							lable 联系人姓名:
+							input.form_control_name(type='text', value='真实姓名', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '真实姓名';}")
+							input(type='radio', value='先生', name='men')
+							| 先生
+							input(type='radio', value='女士', name='women')
+							| 女士
+						.form_lb
+							lable 手机号:
+							input.form-control(type='text', value='请输入手机号', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '请输入手机号';}")
+						.form_lb
+							lable 固定号码:
+							input.form-control(type='text', value='选填', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '选填';}")
+						.form_lb
+							lable 邮箱:
+							input.form-control(type='text', value='选填', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '选填';}")
+						.form_lb
+							lable 推荐人:
+							input.form-control(type='text', value='选填', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '选填';}")
+						.form_lb.clearfix
+							lable 密码:
+							input.form-control(type='text', value='请输入密码', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '请输入密码';}")
+							.saf_lv_main.fl
+								.saf_lv_main_jd
+									.saf_lv(style='background:#29A7E1;')
+									.saf_lv
+									.saf_lv
+									.saf_lv
+									.saf_lv
+						.form_lb
+							lable 确认密码:
+							input.form-control(type='text', value='请再次输入密码', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '请再次输入密码';}")
+						.form_lb.cheb_yes
+							input(type='checkbox', name='', value='')
+							span
+								| 我已阅读并同意ppp在线的
+								a(href='')
+									span(style='color:#29A7E1;') 《服务条款》
+							p
+								a(href='')
+									img(src='/public/images/home/login_btn.png')
+			.right_pic.fl
+				.l_acc_dl
+					span
+						| 已有帐号？
+						a(href='')
+							span(style='color:#29A7E1;') 立即登录
+				p
+					img(src='/public/images/home/right_bg.jpg')
+block script
+	script.
+		$().ready(function(){
+			$("#form_main_jg").click(function(){
+				$("#login1").css("display","none")
+				$("#login2").css("display","block")
+				
+			})
+			}
+		})
